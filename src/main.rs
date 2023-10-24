@@ -40,10 +40,13 @@ impl Complex {
         }
     }
 
+    // RustRover really doesn't seem to like the fixed point types
+    //noinspection RsTypeCheck
     fn abs_s(&self) -> FIXED {
         self.re * self.re + self.im * self.im
     }
 
+    //noinspection RsTypeCheck
     fn square(self) -> Self {
         Self {
             re: self.re * self.re - self.im * self.im,
