@@ -1,0 +1,13 @@
+[package]
+name = "mc_mandelbrot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mcinterface = { git = "https://github.com/arthomnix/mcinterface-rs" }
+fixed = "1.24"
+
+[profile.dev]
+opt-level = 1
