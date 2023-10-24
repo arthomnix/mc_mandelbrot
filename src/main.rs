@@ -79,7 +79,7 @@ macro_rules! env_i32_default {
 
 #[no_mangle]
 pub extern fn _start() -> i32 {
-    let iters  = env_i32_default!("MAX_ITERATIONS", "12");
+    let iters = env_i32_default!("MAX_ITERATIONS", "12");
     let width = env_i32_default!("WIDTH", "80");
 
     let init_x = env_i32_default!("POS_X", "-50");
