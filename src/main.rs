@@ -70,7 +70,7 @@ fn block_from_iters(iters: i32) -> Block {
         10 => Block::Lapis,
         11 => Block::OakLog,
         12 => Block::Redstone,
-        _ => Block::Air,
+        _ => block_from_iters(iters - 13),
     }
 }
 
