@@ -58,8 +58,8 @@ dependencies = [
 
 [[package]]
 name = "mcinterface"
-version = "0.1.0"
-source = "git+https://github.com/arthomnix/mcinterface-rs#4ab02133e35209acdb88a780655af9020ed1fa57"
+version = "0.2.0"
+source = "git+https://github.com/arthomnix/mcinterface-rs#7b591b763fa1e911a103fe4a58efc4ccfe93a383"
 
 [[package]]
 name = "typenum"

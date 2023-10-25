@@ -89,6 +89,8 @@ pub extern fn _start() -> i32 {
     let init_y = env_i32_default!("POS_Y", "128");
     let init_z = env_i32_default!("POS_Z", "-50");
 
+    println!("Drawing {width}x{width} Mandelbrot set at {init_x}, {init_y}, {init_z} with {iters} iterations per block");
+
     let init_c = Complex {
         re: FIXED::from_num(-2),
         im: FIXED::from_num(2),
