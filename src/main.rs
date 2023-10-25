@@ -46,13 +46,10 @@ impl Complex {
         }
     }
 
-    // RustRover really doesn't seem to like the fixed point types
-    //noinspection RsTypeCheck
     fn abs_s(&self) -> FIXED {
         self.re * self.re + self.im * self.im
     }
 
-    //noinspection RsTypeCheck
     fn square(self) -> Self {
         Self {
             re: self.re * self.re - self.im * self.im,
@@ -82,18 +79,18 @@ fn block_from_iters(iters: i32) -> Block {
 
 macro_rules! env_i32_default {
     ($var:literal,$default:literal) => {
-        i32::from_str(option_env!($var).unwrap_or($default)).unwrap()
+        option_env!($var).map_or($default, |n| i32::from_str(n).unwrap_or($default))
     }
 }
 
 #[no_mangle]
 pub extern fn _start() -> i32 {
-    let iters = env_i32_default!("MAX_ITERATIONS", "12");
-    let width = env_i32_default!("WIDTH", "80");
+    let iters = env_i32_default!("MAX_ITERATIONS", 12);
+    let width = env_i32_default!("WIDTH", 80);
 
-    let init_x = env_i32_default!("POS_X", "-50");
-    let init_y = env_i32_default!("POS_Y", "128");
-    let init_z = env_i32_default!("POS_Z", "-50");
+    let init_x = env_i32_default!("POS_X", -50);
+    let init_y = env_i32_default!("POS_Y", 128);
+    let init_z = env_i32_default!("POS_Z", -50);
 
     println!("Drawing {width}x{width} Mandelbrot set at {init_x}, {init_y}, {init_z} with {iters} iterations per block");
 
