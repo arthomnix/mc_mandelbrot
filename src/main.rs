@@ -3,10 +3,16 @@
 
 use core::ops::{Add, AddAssign};
 use core::str::FromStr;
-use fixed::types::I16F16;
 use mcinterface::*;
 
-type FIXED = I16F16;
+#[cfg(feature = "fixedi32")]
+type FIXED = fixed::types::I10F22;
+
+#[cfg(feature = "fixedi64")]
+type FIXED = fixed::types::I10F54;
+
+#[cfg(feature = "fixedi128")]
+type FIXED = fixed::types::I10F118;
 
 #[derive(Copy, Clone)]
 struct Complex {

@@ -10,5 +10,11 @@ edition = "2021"
 mcinterface = "0.2"
 fixed = "1.24"
 
+[features]
+default = [ "fixedi32" ]
+fixedi32 = []
+fixedi64 = []
+fixedi128 = []
+
 [profile.dev]
 opt-level = 1
