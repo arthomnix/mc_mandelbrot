@@ -59,7 +59,8 @@ dependencies = [
 [[package]]
 name = "mcinterface"
 version = "0.2.0"
-source = "git+https://github.com/arthomnix/mcinterface-rs#7b591b763fa1e911a103fe4a58efc4ccfe93a383"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e4387eed443dc2718722d13de0793c9af93efa3d2130c550d306ede82dea2fa2"
 
 [[package]]
 name = "typenum"
