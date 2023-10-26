@@ -77,12 +77,6 @@ fn block_from_iters(iters: i32) -> Block {
     }
 }
 
-macro_rules! env_i32_default {
-    ($var:literal,$default:literal) => {
-        option_env!($var).map_or($default, |n| i32::from_str(n).unwrap_or($default))
-    }
-}
-
 #[no_mangle]
 pub extern fn _start() -> i32 {
     let iters = env_i32_default!("MAX_ITERATIONS", 12);
