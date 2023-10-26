@@ -2,7 +2,6 @@
 #![no_std]
 
 use core::ops::{Add, AddAssign};
-use core::str::FromStr;
 use mcinterface::*;
 
 #[cfg(feature = "fixedi32")]

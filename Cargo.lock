@@ -58,9 +58,9 @@ dependencies = [
 
 [[package]]
 name = "mcinterface"
-version = "0.3.1"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "581cc4296ddaa1819f7cfaae1adfc3058cc8b84cc229cc21d817d1246213fa3c"
+checksum = "3c850e4b04f6a2bff06f8e010c819a1ea8f89dae75e253243192c1129ea418aa"
 
 [[package]]
 name = "typenum"
